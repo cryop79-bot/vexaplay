@@ -1,0 +1,174 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0b0b10;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 5%;
+  border-bottom: 1px solid #252530;
+}
+
+.logo {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ed3979;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background: #252530;
+  border: 0;
+  padding: 11px 15px;
+  border-radius: 9px;
+}
+
+.hero {
+  padding: 55px 7%;
+  background: linear-gradient(120deg, #24112d, #101018);
+}
+
+.hero .tag {
+  color: #ed3979;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 7vw, 55px);
+  line-height: 1.1;
+}
+
+.hero p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: #ed3979;
+  color: white;
+  text-decoration: none;
+  padding: 13px 20px;
+  border-radius: 9px;
+  margin-top: 12px;
+}
+
+.search-section,
+.videos-section,
+.player-section {
+  padding: 25px 5%;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 15px;
+  background: #191922;
+  color: white;
+  border: 1px solid #33333e;
+  border-radius: 10px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-heading span {
+  color: #ed3979;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.video-card {
+  background: #191922;
+  padding: 9px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.thumbnail {
+  height: 130px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  font-size: 30px;
+}
+
+.thumb-one {
+  background: linear-gradient(135deg, #245b62, #72a88b);
+}
+
+.thumb-two {
+  background: linear-gradient(135deg, #173a73, #42a4bb);
+}
+
+.thumb-three {
+  background: linear-gradient(135deg, #73315b, #e58b9b);
+}
+
+.thumb-four {
+  background: linear-gradient(135deg, #574322, #a58d4c);
+}
+
+.video-card h3 {
+  font-size: 14px;
+}
+
+.video-card p,
+.player-section p {
+  color: #999;
+  font-size: 12px;
+}
+
+.player-section {
+  background: #15151e;
+  margin: 20px 5%;
+  border-radius: 13px;
+}
+
+.player-section video {
+  width: 100%;
+  border-radius: 10px;
+  background: black;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+}
+
+@media (min-width: 700px) {
+  .video-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .thumbnail {
+    height: 170px;
+  }
+}
