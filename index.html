@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b10">
+  <title>VexaPlay - Video Streaming</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a class="logo" href="#">Vexa<span>Play</span></a>
+  <button id="menuBtn" aria-label="Toggle menu">☰</button>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="tag">YOUR VIDEO DESTINATION</p>
+    <h1>Discover videos<br>you'll enjoy.</h1>
+    <p>Explore, watch and enjoy your favourite videos.</p>
+    <a href="#videos" class="primary-btn">Explore Videos</a>
+  </section>
+
+  <section class="search-section">
+    <input id="searchInput" type="search"
+      placeholder="Search videos..." aria-label="Search videos">
+  </section>
+
+  <section id="videos" class="videos-section">
+    <div class="section-heading">
+      <h2>Featured Videos</h2>
+      <span>Explore</span>
+    </div>
+
+    <div class="video-grid" id="videoGrid">
+
+      <article class="video-card"
+        data-title="Beautiful Nature">
+        <div class="thumbnail thumb-one">▶</div>
+        <h3>Beautiful Nature</h3>
+        <p>VexaPlay Studio · Demo</p>
+      </article>
+
+      <article class="video-card"
+        data-title="Ocean Adventure">
+        <div class="thumbnail thumb-two">▶</div>
+        <h3>Ocean Adventure</h3>
+        <p>VexaPlay Studio · Demo</p>
+      </article>
+
+      <article class="video-card"
+        data-title="Amazing Flowers">
+        <div class="thumbnail thumb-three">▶</div>
+        <h3>Amazing Flowers</h3>
+        <p>VexaPlay Studio · Demo</p>
+      </article>
+
+      <article class="video-card"
+        data-title="Wildlife World">
+        <div class="thumbnail thumb-four">▶</div>
+        <h3>Wildlife World</h3>
+        <p>VexaPlay Studio · Demo</p>
+      </article>
+
+    </div>
+    <p id="noResults" hidden>No videos found.</p>
+  </section>
+
+  <section class="player-section" id="player">
+    <h2>Video Player</h2>
+    <video controls playsinline preload="metadata">
+      <source
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+        type="video/webm">
+      Your browser does not support video playback.
+    </video>
+    <p>VexaPlay sample video</p>
+  </section>
+</main>
+
+<footer>
+  <a class="logo" href="#">Vexa<span>Play</span></a>
+  <p>© 2026 VexaPlay. Demo project.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
