@@ -2,18 +2,25 @@
 const searchInput = document.getElementById("searchInput");
 const videoCards = document.querySelectorAll(".video-card");
 const menuBtn = document.getElementById("menuBtn");
+const noResults = document.getElementById("noResults");
 
 // Search videos
 searchInput.addEventListener("input", function () {
-  const searchText = this.value.toLowerCase();
+  const searchText = this.value.toLowerCase().trim();
+  let visibleCount = 0;
 
   videoCards.forEach(function (card) {
     const title = card.dataset.title.toLowerCase();
+    const matches = title.includes(searchText);
 
-    card.style.display = title.includes(searchText)
-      ? "block"
-      : "none";
+    card.style.display = matches ? "block" : "none";
+
+    if (matches) {
+      visibleCount++;
+    }
   });
+
+  noResults.hidden = visibleCount !== 0;
 });
 
 // Menu button
