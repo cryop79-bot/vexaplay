@@ -1,35 +1,24 @@
 
 const searchInput = document.getElementById("searchInput");
-const cards = document.querySelectorAll(".video-card");
-const noResults = document.getElementById("noResults");
+const videoCards = document.querySelectorAll(".video-card");
+const menuBtn = document.getElementById("menuBtn");
 
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.toLowerCase();
-  let visible = 0;
+// Search videos
+searchInput.addEventListener("input", function () {
+  const searchText = this.value.toLowerCase();
 
-  cards.forEach(card => {
+  videoCards.forEach(function (card) {
     const title = card.dataset.title.toLowerCase();
-    const match = title.includes(query);
 
-    card.hidden = !match;
-
-    if (match) visible++;
-  });
-
-  noResults.hidden = visible !== 0;
-});
-
-cards.forEach(card => {
-  card.addEventListener("click", () => {
-    document.getElementById("player")
-      .scrollIntoView({ behavior: "smooth" });
+    card.style.display = title.includes(searchText)
+      ? "block"
+      : "none";
   });
 });
 
-document.getElementById("menuBtn")
-  .addEventListener("click", () => {
-    document.getElementById("videos")
-      .scrollIntoView({ behavior: "smooth" });
+// Menu button
+menuBtn.addEventListener("click", function () {
+  document.getElementById("videos").scrollIntoView({
+    behavior: "smooth"
   });
-
-console.log("VexaPlay loaded successfully!");
+});
