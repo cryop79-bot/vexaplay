@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Video | VexaPlay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="logo">Vexa<span>Play</span></a>
+  <a href="index.html" style="color:white;text-decoration:none">
+    ← Home
+  </a>
+</header>
+
+<main class="player-section">
+  <h1 id="videoTitle">Beautiful Nature</h1>
+  <p id="videoDescription">Explore the beauty of nature.</p>
+
+  <video controls playsinline preload="metadata">
+    <source
+      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+      type="video/webm">
+  </video>
+
+  <p style="margin-top:20px;color:#aaa">
+    Enjoy watching on VexaPlay.
+  </p>
+</main>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const title = params.get("title");
+
+  if (title) {
+    document.getElementById("videoTitle").textContent = title;
+    document.title = title + " | VexaPlay";
+  }
+</script>
+
+</body>
+</html>
