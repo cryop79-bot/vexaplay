@@ -152,3 +152,42 @@ footer {
     padding: 35px 18px;
   }
 }
+
+.about {
+  text-align: center;
+  padding: 65px 20px;
+  background: linear-gradient(135deg, #171326, #10101a);
+  border-top: 1px solid #29243b;
+}
+
+.about h2 {
+  font-size: 30px;
+  margin-bottom: 18px;
+  color: #a78bfa;
+}
+
+.about p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: #aaa;
+  line-height: 1.8;
+}
+
+.about a {
+  display: inline-block;
+  padding: 13px 25px;
+  background: #8b5cf6;
+  color: white;
+  text-decoration: none;
+  border-radius: 9px;
+  font-weight: bold;
+}
+
+.about a:hover {
+  background: #7c3aed;
+}
+
+footer p + p {
+  margin-top: 10px;
+  font-size: 13px;
+}
