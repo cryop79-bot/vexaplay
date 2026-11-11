@@ -191,3 +191,34 @@ footer p + p {
   margin-top: 10px;
   font-size: 13px;
 }
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navigation a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.navigation a:hover {
+  color: #a78bfa;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .navigation {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 22px;
+  }
+}
