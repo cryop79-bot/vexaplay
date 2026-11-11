@@ -39,3 +39,14 @@ videoCards.forEach(function (card) {
       "video.html?title=" + encodeURIComponent(title);
   });
 });
+// Open video details page
+videoCards.forEach(function (card) {
+  card.style.cursor = "pointer";
+
+  card.addEventListener("click", function () {
+    const title = card.dataset.title;
+
+    window.location.href =
+      "video.html?title=" + encodeURIComponent(title);
+  });
+});
